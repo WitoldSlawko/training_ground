@@ -1,0 +1,681 @@
+*{
+    box-sizing: border-box;
+    line-height: 50px;
+}
+
+body {
+	background-image: url(../images/raditz_wallpaper.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+}
+
+main > .container {
+	margin: 0 auto;
+	max-width: 1150px;
+	width: 100%;
+	overflow: hidden;
+	height: 700px;
+	position: relative;
+	border: 1px solid transparent;
+}
+
+.tv {
+	position: relative;
+	top: 25px;
+	margin: 0 auto;
+	width: 1100px;
+	height: 650px;
+    border: 1px solid transparent;
+	overflow: hidden;
+}
+
+.tv * {
+	display: inline-block;
+}
+
+button {
+	height: 40px;
+	width: 40px;
+	float: right;
+    margin: 4px;
+	vertical-align: center;
+	text-align: center;
+	font-weight: bold;
+}
+
+img {
+	clear: both;
+	float: left;
+	position: relative;
+	left: 5px;
+	width: 500px;
+	height: 650px;
+	overflow: hidden;
+	transition: all 1s ease;
+	bottom: 600px;
+    border: 1px solid transparent;
+}
+
+button:focus {
+	background-color: crimson;
+	color: yellow;
+}
+
+#b1:focus ~ img{
+	transform: translateY(0);
+}
+
+#b2:focus ~ img{
+	transform: translateY(-100%);
+}
+
+#b3:focus ~ img{
+	transform: translateY(-200%);
+}
+
+#b4:focus ~ img{
+	transform: translateY(-300%);
+}
+
+#b5:focus ~ img{
+	transform: translateY(-400%);
+}
+
+#b6:focus ~ img{
+	transform: translateY(-500%);
+}
+
+#b7:focus ~ img{
+	transform: translateY(-600%);
+}
+
+#b8:focus ~ img{
+	transform: translateY(-700%);
+}
+
+#b9:focus ~ img{
+	transform: translateY(-800%);
+}
+
+#b10:focus ~ img{
+	transform: translateY(-900%);
+}
+
+#b11:focus ~ img{
+	transform: translateY(-1000%);
+}
+
+#b12:focus ~ img{
+	transform: translateY(-1100%);
+}
+
+#b13:focus ~ img{
+	transform: translateY(-1200%);
+}
+
+#b14:focus ~ img{
+	transform: translateY(-1300%);
+}
+
+#b15:focus ~ img{
+	transform: translateY(-1400%);
+}
+
+#b16:focus ~ img{
+	transform: translateY(-1500%);
+}
+
+#b17:focus ~ img{
+	transform: translateY(-1600%);
+}
+
+#b18:focus ~ img{
+	transform: translateY(-1700%);
+}
+
+#b19:focus ~ img{
+	transform: translateY(-1800%);
+}
+
+#b20:focus ~ img{
+	transform: translateY(-1900%);
+}
+
+#b21:focus ~ img{
+	transform: translateY(-2000%);
+}
+
+#b22:focus ~ img{
+	transform: translateY(-2100%);
+}
+
+#b23:focus ~ img{
+	transform: translateY(-2200%);
+}
+
+#b24:focus ~ img{
+	transform: translateY(-2300%);
+}
+
+#b25:focus ~ img{
+	transform: translateY(-2400%);
+}
+
+#b26:focus ~ img{
+	transform: translateY(-2500%);
+}
+
+#b27:focus ~ img{
+	transform: translateY(-2600%);
+}
+
+#b28:focus ~ img{
+	transform: translateY(-2700%);
+}
+
+#b29:focus ~ img{
+	transform: translateY(-2800%);
+}
+
+#b30:focus ~ img{
+	transform: translateY(-2900%);
+}
+
+#b31:focus ~ img{
+	transform: translateY(-3000%);
+}
+
+#b32:focus ~ img{
+	transform: translateY(-3100%);
+}
+
+#b33:focus ~ img{
+	transform: translateY(-3200%);
+}
+
+#b34:focus ~ img{
+	transform: translateY(-3300%);
+}
+
+#b35:focus ~ img{
+	transform: translateY(-3400%);
+}
+
+#b36:focus ~ img{
+	transform: translateY(-3500%);
+}
+
+#b37:focus ~ img{
+	transform: translateY(-3600%);
+}
+
+#b38:focus ~ img{
+	transform: translateY(-3700%);
+}
+
+#b39:focus ~ img{
+	transform: translateY(-3800%);
+}
+
+#b40:focus ~ img{
+	transform: translateY(-3900%);
+}
+
+#b41:focus ~ img{
+	transform: translateY(-4000%);
+}
+
+#b42:focus ~ img{
+	transform: translateY(-4100%);
+}
+
+#b43:focus ~ img{
+	transform: translateY(-4200%);
+}
+
+#b44:focus ~ img{
+	transform: translateY(-4300%);
+}
+
+#b45:focus ~ img{
+	transform: translateY(-4400%);
+}
+
+#b46:focus ~ img{
+	transform: translateY(-4500%);
+}
+
+#b47:focus ~ img{
+	transform: translateY(-4600%);
+}
+
+#b48:focus ~ img{
+	transform: translateY(-4700%);
+}
+
+#b49:focus ~ img{
+	transform: translateY(-4800%);
+}
+
+#b50:focus ~ img{
+	transform: translateY(-4900%);
+}
+
+#b51:focus ~ img{
+	transform: translateY(-5000%);
+}
+
+#b52:focus ~ img{
+	transform: translateY(-5100%);
+}
+
+#b53:focus ~ img{
+	transform: translateY(-5200%);
+}
+
+#b54:focus ~ img{
+	transform: translateY(-5300%);
+}
+
+#b55:focus ~ img{
+	transform: translateY(-5400%);
+}
+
+#b56:focus ~ img{
+	transform: translateY(-5500%);
+}
+
+#b57:focus ~ img{
+	transform: translateY(-5600%);
+}
+
+#b59:focus ~ img{
+	transform: translateY(-5800%);
+}
+
+#b60:focus ~ img{
+	transform: translateY(-5900%);
+}
+
+#b61:focus ~ img{
+	transform: translateY(-6000%);
+}
+
+#b62:focus ~ img{
+	transform: translateY(-6100%);
+}
+
+#b63:focus ~ img{
+	transform: translateY(-6200%);
+}
+
+#b64:focus ~ img{
+	transform: translateY(-6300%);
+}
+
+#b65:focus ~ img{
+	transform: translateY(-6400%);
+}
+
+#b66:focus ~ img{
+	transform: translateY(-6500%);
+}
+
+#b67:focus ~ img{
+	transform: translateY(-6600%);
+}
+
+#b68:focus ~ img{
+	transform: translateY(-6700%);
+}
+
+#b69:focus ~ img{
+	transform: translateY(-6800%);
+}
+
+#b70:focus ~ img{
+	transform: translateY(-6900%);
+}
+
+#b71:focus ~ img{
+	transform: translateY(-7000%);
+}
+
+#b72:focus ~ img{
+	transform: translateY(-7100%);
+}
+
+#b73:focus ~ img{
+	transform: translateY(-7200%);
+}
+
+#b74:focus ~ img{
+	transform: translateY(-7300%);
+}
+
+#b75:focus ~ img{
+	transform: translateY(-7400%);
+}
+
+#b76:focus ~ img{
+	transform: translateY(-7500%);
+}
+
+#b77:focus ~ img{
+	transform: translateY(-7600%);
+}
+
+#b78:focus ~ img{
+	transform: translateY(-7700%);
+}
+
+#b79:focus ~ img{
+	transform: translateY(-7800%);
+}
+
+#b80:focus ~ img{
+	transform: translateY(-7900%);
+}
+
+#b81:focus ~ img{
+	transform: translateY(-8000%);
+}
+
+#b82:focus ~ img{
+	transform: translateY(-8100%);
+}
+
+#b83:focus ~ img{
+	transform: translateY(-8200%);
+}
+
+#b84:focus ~ img{
+	transform: translateY(-8300%);
+}
+
+#b85:focus ~ img{
+	transform: translateY(-8400%);
+}
+
+#b86:focus ~ img{
+	transform: translateY(-8500%);
+}
+
+#b87:focus ~ img{
+	transform: translateY(-8600%);
+}
+
+#b88:focus ~ img{
+	transform: translateY(-8700%);
+}
+
+#b89:focus ~ img{
+	transform: translateY(-8800%);
+}
+
+#b90:focus ~ img{
+	transform: translateY(-8900%);
+}
+
+#b91:focus ~ img{
+	transform: translateY(-9000%);
+}
+
+#b92:focus ~ img{
+	transform: translateY(-9100%);
+}
+
+#b93:focus ~ img{
+	transform: translateY(-9200%);
+}
+
+#b94:focus ~ img{
+	transform: translateY(-9300%);
+}
+
+#b95:focus ~ img{
+	transform: translateY(-9400%);
+}
+
+#b96:focus ~ img{
+	transform: translateY(-9500%);
+}
+
+#b97:focus ~ img{
+	transform: translateY(-9600%);
+}
+
+#b98:focus ~ img{
+	transform: translateY(-9700%);
+}
+
+#b99:focus ~ img{
+	transform: translateY(-9800%);
+}
+
+#b100:focus ~ img{
+	transform: translateY(-9900%);
+}
+
+#b101:focus ~ img{
+	transform: translateY(-10000%);
+}
+
+#b102:focus ~ img{
+	transform: translateY(-10100%);
+}
+
+#b103:focus ~ img{
+	transform: translateY(-10200%);
+}
+
+#b104:focus ~ img{
+	transform: translateY(-10300%);
+}
+
+#b105:focus ~ img{
+	transform: translateY(-10400%);
+}
+
+#b106:focus ~ img{
+	transform: translateY(-10500%);
+}
+
+#b107:focus ~ img{
+	transform: translateY(-10600%);
+}
+
+#b108:focus ~ img{
+	transform: translateY(-10700%);
+}
+
+#b109:focus ~ img{
+	transform: translateY(-10800%);
+}
+
+#b110:focus ~ img{
+	transform: translateY(-10900%);
+}
+
+#b111:focus ~ img{
+	transform: translateY(-11000%);
+}
+
+#b112:focus ~ img{
+	transform: translateY(-11100%);
+}
+
+#b113:focus ~ img{
+	transform: translateY(-11200%);
+}
+
+#b114:focus ~ img{
+	transform: translateY(-11300%);
+}
+
+#b115:focus ~ img{
+	transform: translateY(-11400%);
+}
+
+#b116:focus ~ img{
+	transform: translateY(-11500%);
+}
+
+#b117:focus ~ img{
+	transform: translateY(-11600%);
+}
+
+#b118:focus ~ img{
+	transform: translateY(-11700%);
+}
+
+#b119:focus ~ img{
+	transform: translateY(-11800%);
+}
+
+#b120:focus ~ img{
+	transform: translateY(-11900%);
+}
+
+#b121:focus ~ img{
+	transform: translateY(-12000%);
+}
+
+#b122:focus ~ img{
+	transform: translateY(-12100%);
+}
+
+#b123:focus ~ img{
+	transform: translateY(-12200%);
+}
+
+#b124:focus ~ img{
+	transform: translateY(-12300%);
+}
+
+#b125:focus ~ img{
+	transform: translateY(-12400%);
+}
+
+#b126:focus ~ img{
+	transform: translateY(-12500%);
+}
+
+#b127:focus ~ img{
+	transform: translateY(-12600%);
+}
+
+#b128:focus ~ img{
+	transform: translateY(-12700%);
+}
+
+#b129:focus ~ img{
+	transform: translateY(-12800%);
+}
+
+#b130:focus ~ img{
+	transform: translateY(-12900%);
+}
+
+#b131:focus ~ img{
+	transform: translateY(-13000%);
+}
+
+#b132:focus ~ img{
+	transform: translateY(-13100%);
+}
+
+#b133:focus ~ img{
+	transform: translateY(-13200%);
+}
+
+#b134:focus ~ img{
+	transform: translateY(-13300%);
+}
+
+#b135:focus ~ img{
+	transform: translateY(-13400%);
+}
+
+#b136:focus ~ img{
+	transform: translateY(-13500%);
+}
+
+#b137:focus ~ img{
+	transform: translateY(-13600%);
+}
+
+#b138:focus ~ img{
+	transform: translateY(-13700%);
+}
+
+#b139:focus ~ img{
+	transform: translateY(-13800%);
+}
+
+#b140:focus ~ img{
+	transform: translateY(-13900%);
+}
+
+#b141:focus ~ img{
+	transform: translateY(-14000%);
+}
+
+#b142:focus ~ img{
+	transform: translateY(-14100%);
+}
+
+#b143:focus ~ img{
+	transform: translateY(-14200%);
+}
+
+#b144:focus ~ img{
+	transform: translateY(-14300%);
+}
+
+.container2 {
+	margin: 0 auto;
+	max-width: 1150px;
+	width: 100%;
+	overflow: hidden;
+	height: auto;
+	position: relative;
+	border: 1px solid transparent;
+}
+
+.head {
+	clear:none;
+	width: 33%;
+	height: 200px;
+	bottom: 0;
+	position: relative;
+	display: inline-block;
+	margin-right: 5%;
+}
+
+.foot {
+	clear:none;
+	width: 30%;
+	height: 100px;
+	bottom: 0;
+	position: relative;
+	display: inline-block;
+	margin-left: 10%;
+}
+
+p {
+	clear : both;
+	float: left;
+	display: block;
+	position: relative;
+	font-size: 24px;
+	color: gold;
+	left: 100px;
+}
+
+a {
+	text-decoration: none;
+	color: gold;
+	font-weight: bold;
+}
