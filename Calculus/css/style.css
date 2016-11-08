@@ -1,0 +1,195 @@
+.container {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 100%;
+	/*border: 2px solid red;*/
+	overflow: hidden;
+	margin-bottom:10px;
+    padding: 10px;
+}
+
+body {
+	background-image: url(../computer-310958_1280.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.mainhead > .container {
+	height: 100px;
+}
+
+.icon{
+	position: relative;
+	height: 64px;
+	width: 64px;
+	top: 10px;
+	left: 450px;
+}
+
+section > .container {
+	height: 325px;
+}
+
+.container > div {
+	position: relative;
+	/*border: 1px solid red;*/
+	margin: 5px;
+}
+
+.inputs_box {
+	height: 65px;
+	position: relative;
+	width: 725px;
+	left: 125px;
+}
+
+.inputs_box > div {
+	position: relative;
+	display: inline;
+	width: 210px;
+	padding: 3px;
+	margin: 5px;
+	/*border: 2px solid red;*/
+}
+
+.inputs_box > div * {
+	position: relative;
+	align-content: center;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.inputs_box * {
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+.inputs_box div:first-child label, .inputs_box div:nth-child(3) label {
+	text-indent: 25px;
+}
+
+.inputs_box div:nth-child(2) label {
+	text-indent: 22px;
+}
+
+.inputs_box div:last-child label {
+	text-indent: 50px;
+}
+
+.inputs_box div:first-child, .inputs_box div:nth-child(3){
+	width: 150px;
+}
+
+inputs_box div:first-child {
+	left: 100px;
+}
+
+.inputs_box div:nth-child(2){
+	width: 150px;
+}
+
+.inputs_box div:last-child {
+	width: 170px;
+}
+
+input, label {
+	font-weight: bold;
+}
+
+#number1, #number2 {
+	left: 5px;
+	width: 120px;
+	background-color:aquamarine;
+}
+
+#operation {
+	left: 10px;
+	width: 120px;
+	background-color:chartreuse;
+}
+
+#equal_to {
+	text-indent: 3px;
+	font-size: 60px;
+	width: 50px;
+	height: 50px;
+}
+
+#result {
+	left: 5px;
+	width: 150px;
+	background-color:pink;
+}
+
+.buttons_box {
+	width: 450px;
+	float: left;
+}
+
+.buttons_box > button {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	left: 140px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#zero, #dot, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #random {
+	background-color:aquamarine;
+}
+
+#plus, #minus, #multiply, #divide, #power {
+	background-color:chartreuse;
+}
+
+#equal {
+	background-color: pink;
+}
+
+#clear_calcs {
+	background-color: crimson;
+	color: gold;
+}
+
+#send {
+	background-color: gold;
+}
+
+button:active {
+	color: crimson;
+}
+
+#list_box {
+	position: relative;
+	width: 375px;
+	height: 200px;
+	float: left;
+	background-color: gold;
+	overflow-y: scroll;
+}
+
+#clear_history {
+	position: relative;
+	/*left: 700px;*/
+	right: 240px;
+	top: 210px;
+	font-weight: bold;
+}
+/*
+ol > li {
+	position: relative;
+	left: 25px;
+}
+*/
+.mainfoot > .container {
+	height: 200px;
+}
+
+.logo {
+	position: relative;
+	width: 240px;
+	height: 150px;
+	left: 375px;
+}
