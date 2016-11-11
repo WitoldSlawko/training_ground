@@ -65,6 +65,7 @@ section > .container {
 	float: left;
 }
 
+<<<<<<< HEAD
 .inputs_box > div:first-child > p:first-child, .inputs_box > div:nth-child(3) > p:first-child {
 	text-indent: 25px;
 	font-weight: bold;
@@ -78,11 +79,26 @@ section > .container {
 .inputs_box > div:last-child > p:first-child {
 	text-indent: 50px;
 	font-weight: bold;
+=======
+.inputs_box div:first-child label, .inputs_box div:nth-child(3) label {
+	text-indent: 25px;
+}
+
+.inputs_box div:nth-child(2) label {
+	text-indent: 22px;
+}
+
+.inputs_box div:last-child label {
+	text-indent: 50px;
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 }
 
 .inputs_box div:first-child, .inputs_box div:nth-child(3){
 	width: 150px;
+<<<<<<< HEAD
 	font-weight: bold;
+=======
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 }
 
 inputs_box div:first-child {
@@ -103,20 +119,30 @@ input, label {
 
 #number1, #number2 {
 	left: 5px;
+<<<<<<< HEAD
 	height: 30px;
 	width: 120px;
 	background-color:aquamarine;
 	font-size: 25px;
 	font-weight: bold;
+=======
+	width: 120px;
+	background-color:aquamarine;
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 }
 
 #operation {
 	left: 10px;
+<<<<<<< HEAD
 	height: 30px;
 	width: 120px;
 	background-color:chartreuse;
 	font-size: 25px;
 	font-weight: bold;
+=======
+	width: 120px;
+	background-color:chartreuse;
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 }
 
 #equal_to {
@@ -128,11 +154,16 @@ input, label {
 
 #result {
 	left: 5px;
+<<<<<<< HEAD
 	height: 30px;
 	width: 150px;
 	background-color:pink;
 	font-size: 25px;
 	font-weight: bold;
+=======
+	width: 150px;
+	background-color:pink;
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 }
 
 .buttons_box {
@@ -147,7 +178,10 @@ input, label {
 	left: 140px;
 	font-weight: bold;
 	font-size: 20px;
+<<<<<<< HEAD
 	margin: 1px;
+=======
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 }
 
 #zero, #dot, #one, #two, #three, #four, #five, #six, #seven, #eight, #nine, #random {
@@ -191,7 +225,16 @@ button:active {
 	top: 210px;
 	font-weight: bold;
 }
+<<<<<<< HEAD
 
+=======
+/*
+ol > li {
+	position: relative;
+	left: 25px;
+}
+*/
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 .mainfoot > .container {
 	height: 200px;
 }
@@ -201,9 +244,12 @@ button:active {
 	width: 240px;
 	height: 150px;
 	left: 375px;
+<<<<<<< HEAD
 }
 
 #clear_calcs, #send, #random, #power {
 	top: -2px;
 	font-size: 11px;
+=======
+>>>>>>> 98a0c2872eba2d7c718a4c022be5a76c46d9da54
 }
