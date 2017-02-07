@@ -1,0 +1,257 @@
+@function rel($licznik,$mianownik){
+    $wynik_procent: ($licznik/$mianownik)*100%;
+    @return $wynik_procent;
+}
+
+* {
+	box-sizing: border-box;
+	//border: 1px dotted black;
+	position: relative;
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	height: 500px;
+}
+
+header {
+	> .container {
+		display: flex;
+		height: 64px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		> h1 {
+			font-size: 50px;
+			margin-right: 30px;
+		}
+		/*
+		> .refresh {
+			height: 64px;
+			width: 64px;
+			background-image: url(../images/refresh_icon.png);
+			background-size: cover;
+			border-radius: 50%;
+		}
+		*/
+	}
+}
+
+/* --------------------------------- */
+
+.category_btns {
+	> .container {
+		height: 32px;
+		//display: flex;
+		//justify-content: space-between;
+		//align-items: center;
+        > * {
+            display: block;
+            position: relative;
+        }
+		> .category_pack {
+			//left: 0;
+            float: left;
+			width: rel(370,1200);
+			display: flex;
+			> h2 {
+                font-size: 18px;
+                margin-left: 15px;
+			}
+			> .category_type {
+                left: 10px;
+                height: 25px;
+                width: rel(150,270);
+                //border: 1px solid black;
+			}
+		}
+        > .score_board {
+            float: left;
+            height: 32px;
+            width: rel(400,1200);
+            //border: 1px solid black;
+            display: flex;
+            justify-content: space-around;
+            > .win_rate{
+                color: green;
+            }
+            > .win_count {
+                color: green;
+            }
+            > .lose_rate {
+                color: red;
+            }
+            > .lose_count {
+                color: red;
+            }
+            > * {
+                width: 20%;
+                height: 32px;
+                font-size: 20px;
+                font-weight: bold;
+                //border: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+		> .surrender {
+			//right: rel(100,1200);
+            float: left;
+			height: 32px;
+			width: 32px;
+			background-image: url(../images/white_flag_icon.png);
+			background-size: cover;
+		}
+		> .refresh {
+			//right: 0;
+            float: right;
+			height: 32px;
+			width: 32px;
+			background-image: url(../images/refresh_icon.png);
+			background-size: cover;
+			//border-radius: 50%;
+		}
+	}
+}
+
+/* --------------------------------- */
+
+.score {
+	> .container {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		height: 350px;
+		> .hangman_outer {
+			height: 250px;
+			width: rel(500,1200);
+			//border: 1px solid black;
+            overflow: hidden;
+            position: relative;
+            float: left;
+            transition: all 1s ease;
+            display: flex;
+            justify-content: center;
+            /*background-color: green;*/
+            > .hangman_inner {
+                /*background-image: url(../images/the_hangman.png);*/
+                height: 250px;
+                width: 150px;
+                overflow: hidden;
+                position: absolute;
+                transition: all 1s ease;
+            }
+		}
+        > .life {
+            height: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            > .heart {
+                height: 100%;
+                width: rel(25,1200);
+                //border: 1px solid black;
+                background-image: url(../images/heart.jpg);
+                background-size: cover;
+            }
+            > .life_count {
+                height: 100%;
+                width: rel(25,1200);
+                font-size: 20px;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+		> .letters {
+			height: 75px;
+			width: rel(1000,1200);
+			display: flex;
+			//justify-content: space-between;
+			justify-content: center;
+			align-items: center;
+			//border: 1px solid black;
+		}
+	}
+}
+
+/* --------------------------------- */
+
+.typing {
+	> .container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 40px;
+		> .selected {
+			height: 40px;
+			width: rel(50,1200);
+			margin-right: 15px;
+			border: 1px solid black;
+			text-transform: uppercase;
+		}
+		> .accept {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 40px;
+			width: rel(50,1200);
+		}
+	}
+}
+
+/* --------------------------------- */
+
+.keyboard {
+	> .container {
+		height: 175px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		> .row {
+			width: 100%;
+			height: 50px;
+			display: flex;
+			justify-content: center;
+			> button {
+			width: rel(50,1200);
+			height: 100%;
+			margin: 0 rel(10,1200);
+			//border-radius: 50%;
+			}
+		}
+	}
+}
+
+button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+
+.row > button {
+	font-size: 20px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	font-size: 22px;
+}
+
+.old_path {
+    background-image: url(../images/the_hangman.png);
+}
+
+.new_path {
+    background-image: url(../images/the_hangman_WIN.png);
+}
