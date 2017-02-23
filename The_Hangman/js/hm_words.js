@@ -37,3 +37,13 @@ var vehicles_pool = ["ambulance", "bicycle", "bulldozer", "bus", "jeep", "minibu
 var weather_pool = ["air", "barometer", "blizzard", "Celsius", "chill", "cirrus", "cloud", "clouds", "cloudy", "cold", "cyclone", "degree", "dew", "drizzle", "dry", "Fahrenheit", "flood", "fog", "forecast", "freeze", "frost", "hail", "heath", "hot", "humidity", "hurricane", "ice", "lightning", "meteorology", "moon", "precipitation", "pressure", "radar", "rain", "rainstorm", "rainbow", "rainy", "sky", "sleet", "snow", "snowstorm", "snowy", "storm", "sun", "sunny", "temperature", "thermometer", "thunder", "thunderstorm", "tornado", "tsunami", "typhoon", "warm", "weather", "wind", "windy"];
     
 var zodiac_pool = ["aquarius", "aries", "cancer", "capricorn", "gemini", "leo", "libra", "pisces", "sagittarius", "scorpio", "taurus", "virgo"];
+/*
+var super_table = [animals_pool, body_pool, buildings_pool, city_pool, clothes_pool, computer_pool, cosmetics_pool, criminals_pool, family_pool, fruits_pool, geography_pool, house_pool, jobs_pool, music_pool, subjects_pool, sports_pool, trees_pool, vehicles_pool, weather_pool, zodiac_pool];
+
+for (var i=0; i < super_table.length; i++){
+    console.log(super_table[i]);
+    for (var j=0; j < super_table[i].length; j++){
+        console.log(super_table[i][j].length);
+    }
+}
+*/

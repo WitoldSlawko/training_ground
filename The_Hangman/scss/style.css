@@ -1,0 +1,224 @@
+/* line 6, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+* {
+  box-sizing: border-box;
+  position: relative;
+  border: 1px dotted black; }
+
+/* line 12, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+body {
+  background-image: url(../images/limbo3.jpg);
+  background-size: cover; }
+
+/* line 17, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  height: 500px;
+  border: 1px dotted black; }
+
+/* line 26, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+header > .container {
+  display: flex;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 32, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  header > .container > h1 {
+    font-size: 50px;
+    margin-right: 30px; }
+
+/* --------------------------------- */
+/* line 42, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.category_btns > .container {
+  height: 32px; }
+  /* line 44, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .category_btns > .container > * {
+    display: block;
+    position: relative; }
+  /* line 48, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .category_btns > .container > .category_pack {
+    float: left;
+    width: 30.83333%;
+    display: flex; }
+    /* line 52, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .category_btns > .container > .category_pack > h2 {
+      font-size: 18px;
+      margin-left: 15px; }
+    /* line 56, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .category_btns > .container > .category_pack > .category_type {
+      left: 10px;
+      height: 25px;
+      width: 55.55556%; }
+  /* line 62, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .category_btns > .container > .score_board {
+    float: left;
+    height: 32px;
+    width: 33.33333%;
+    border: 1px dotted black;
+    display: flex;
+    justify-content: space-around; }
+    /* line 69, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .category_btns > .container > .score_board > .win_rate {
+      color: green; }
+    /* line 72, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .category_btns > .container > .score_board > .win_count {
+      color: green; }
+    /* line 75, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .category_btns > .container > .score_board > .lose_rate {
+      color: red; }
+    /* line 78, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .category_btns > .container > .score_board > .lose_count {
+      color: red; }
+    /* line 81, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .category_btns > .container > .score_board > * {
+      width: 20%;
+      height: 32px;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  /* line 92, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .category_btns > .container > .surrender {
+    float: left;
+    height: 32px;
+    width: 32px;
+    background-image: url(../images/white_flag_icon.png);
+    background-size: cover; }
+  /* line 99, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .category_btns > .container > .refresh {
+    float: right;
+    height: 32px;
+    width: 32px;
+    background-image: url(../images/refresh_icon.png);
+    background-size: cover; }
+
+/* --------------------------------- */
+/* line 112, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.score > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px; }
+  /* line 118, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .score > .container > .hangman_outer {
+    height: 250px;
+    width: 16.66667%;
+    border: 1px dotted black;
+    overflow: hidden;
+    position: relative;
+    float: left;
+    transition: all 1s ease;
+    display: flex;
+    justify-content: center; }
+    /* line 129, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .score > .container > .hangman_outer > .hangman_inner {
+      border: 1px dotted black;
+      height: 250px;
+      width: 150px;
+      overflow: hidden;
+      position: absolute;
+      transition: all 1s ease; }
+  /* line 138, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .score > .container > .life {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+    /* line 143, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .score > .container > .life > .heart {
+      height: 100%;
+      width: 2.08333%;
+      background-image: url(../images/heart.jpg);
+      background-size: cover; }
+    /* line 150, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .score > .container > .life > .life_count {
+      height: 100%;
+      width: 2.08333%;
+      font-size: 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  /* line 160, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .score > .container > .letters {
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dotted black; }
+
+/* --------------------------------- */
+/* line 175, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.typing > .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px; }
+  /* line 180, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .typing > .container > .selected {
+    height: 40px;
+    width: 4.16667%;
+    margin-right: 15px;
+    border: 1px solid black;
+    text-transform: uppercase; }
+  /* line 187, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .typing > .container > .accept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 4.16667%; }
+
+/* --------------------------------- */
+/* line 200, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.keyboard > .container {
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  /* line 206, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+  .keyboard > .container > .row {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center; }
+    /* line 211, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+    .keyboard > .container > .row > button {
+      width: 4.16667%;
+      height: 100%;
+      margin: 0 0.83333%; }
+
+/* line 221, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold; }
+
+/* line 228, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.row > button {
+  font-size: 20px; }
+
+/* line 232, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px; }
+
+/* line 240, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.old_path {
+  background-image: url(../images/the_hangman.png); }
+
+/* line 244, /home/wiciu/git_github/training_ground/The_Hangman/scss/style.scss */
+.new_path {
+  background-image: url(../images/the_hangman_WIN.png); }
+
+/*# sourceMappingURL=style.css.map */

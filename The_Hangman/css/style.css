@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box;
   position: relative;
+  border: 1px dotted black;
+}
+
+body {
+  background-image: url(../images/limbo3.jpg);
+  background-size: cover;
 }
 
 .container {
@@ -8,6 +14,7 @@
   width: 100%;
   margin: 0 auto;
   height: 500px;
+  border: 1px dotted black;
 }
 
 header > .container {
@@ -16,15 +23,6 @@ header > .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*
-  > .refresh {
-  	height: 64px;
-  	width: 64px;
-  	background-image: url(../images/refresh_icon.png);
-  	background-size: cover;
-  	border-radius: 50%;
-  }
-  */
 }
 header > .container > h1 {
   font-size: 50px;
@@ -41,7 +39,7 @@ header > .container > h1 {
 }
 .category_btns > .container > .category_pack {
   float: left;
-  width: 30.83333333%;
+  width: 30.83333%;
   display: flex;
 }
 .category_btns > .container > .category_pack > h2 {
@@ -51,12 +49,13 @@ header > .container > h1 {
 .category_btns > .container > .category_pack > .category_type {
   left: 10px;
   height: 25px;
-  width: 55.55555556%;
+  width: 55.55556%;
 }
 .category_btns > .container > .score_board {
   float: left;
   height: 32px;
-  width: 33.33333333%;
+  width: 33.33333%;
+  border: 1px dotted black;
   display: flex;
   justify-content: space-around;
 }
@@ -106,17 +105,17 @@ header > .container > h1 {
 }
 .score > .container > .hangman_outer {
   height: 250px;
-  width: 41.66666667%;
+  width: 16.66667%;
+  border: 1px dotted black;
   overflow: hidden;
   position: relative;
   float: left;
   transition: all 1s ease;
   display: flex;
   justify-content: center;
-  /*background-color: green;*/
 }
 .score > .container > .hangman_outer > .hangman_inner {
-  /*background-image: url(../images/the_hangman.png);*/
+  border: 1px dotted black;
   height: 250px;
   width: 150px;
   overflow: hidden;
@@ -131,13 +130,13 @@ header > .container > h1 {
 }
 .score > .container > .life > .heart {
   height: 100%;
-  width: 2.08333333%;
+  width: 2.08333%;
   background-image: url(../images/heart.jpg);
   background-size: cover;
 }
 .score > .container > .life > .life_count {
   height: 100%;
-  width: 2.08333333%;
+  width: 2.08333%;
   font-size: 20px;
   font-weight: bold;
   display: flex;
@@ -146,10 +145,11 @@ header > .container > h1 {
 }
 .score > .container > .letters {
   height: 75px;
-  width: 83.33333333%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px dotted black;
 }
 
 /* --------------------------------- */
@@ -161,7 +161,7 @@ header > .container > h1 {
 }
 .typing > .container > .selected {
   height: 40px;
-  width: 4.16666667%;
+  width: 4.16667%;
   margin-right: 15px;
   border: 1px solid black;
   text-transform: uppercase;
@@ -171,7 +171,7 @@ header > .container > h1 {
   justify-content: center;
   align-items: center;
   height: 40px;
-  width: 4.16666667%;
+  width: 4.16667%;
 }
 
 /* --------------------------------- */
@@ -189,9 +189,9 @@ header > .container > h1 {
   justify-content: center;
 }
 .keyboard > .container > .row > button {
-  width: 4.16666667%;
+  width: 4.16667%;
   height: 100%;
-  margin: 0 0.83333333%;
+  margin: 0 0.83333%;
 }
 
 button {
@@ -220,3 +220,5 @@ button {
 .new_path {
   background-image: url(../images/the_hangman_WIN.png);
 }
+
+/*# sourceMappingURL=style.css.map */
