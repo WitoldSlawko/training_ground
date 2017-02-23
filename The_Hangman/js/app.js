@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	console.log('U mnie dziala!');
 	
 	var refresh = $('.refresh');
 	var surrender = $('.surrender');
@@ -15,23 +14,51 @@ $(document).ready(function(){
     var lose_count = $('.lose_count');
 	
 	var accept = $('.accept');
-	
-	//var randomWords = ['Some', 'Random', 'Words', 'Cow', 'Chicken', 'Dog', 'Bike', 'Car', 'Plane', 'Wizzard', 'Party'];
     
-    var cat1_pool = ['alligator', 'ant', 'bear', 'bee', 'bird', 'camel', 'cat', 'cheetah', 'chicken', 'chimpanzee', 'cow', 'crocodile', 'deer', 'dog', 'dolphin', 'duck', 'eagle', 'elephant', 'fish', 'fly', 'fox', 'frog', 'giraffe', 'goat', 'goldfish', 'hamster', 'hippopotamus', 'horse', 'kangaroo', 'kitten', 'leopard', 'lion', 'lizard', 'lobster', 'monkey', 'octopus', 'ostrich', 'otter', 'owl', 'oyster', 'panda', 'parrot', 'pelican', 'pig', 'pigeon', 'porcupine', 'puppy', 'rabbit', 'rat', 'reindeer', 'rhino', 'ceros', 'rooster', 'scorpion', 'seal', 'shark', 'sheep', 'shrimp', 'snail', 'snake', 'sparrow', 'spider', 'squid', 'squirrel', 'swallow', 'swan', 'tiger', 'toad', 'tortoise', 'turtle', 'vulture', 'walrus', 'weasel', 'whale', 'wolf', 'zebra'];
+    var hm_url = "https://api.myjson.com/bins/193uyt/";
     
-    var cat2_pool = ['policeman', 'teacher', 'fireman'];
-    var cat3_pool = ['baseball', 'tennis', 'rugby'];
-	
+    var json = (function () {
+    
+        $.ajax({
+            'async': false,
+            'global': true,
+            'url': hm_url,
+            'dataType': "json"
+        }).done(function(data){
+            json = data;
+        });
+        return json;
+    })(); 
+    
+    console.log(json);
+
+    var animals_pool = json['0'].animals_pool;
+    var body_pool = json['0'].body_pool;
+    var buildings_pool = json['0'].buildings_pool;
+    var city_pool = json['0'].city_pool;
+    var clothes_pool = json['0'].clothes_pool;
+    var computer_pool = json['0'].computer_pool;
+    var cosmetics_pool = json['0'].cosmetics_pool;
+    var criminals_pool = json['0'].criminals_pool;
+    var family_pool = json['0'].family_pool;
+    var fruits_pool = json['0'].fruits_pool;
+    var geography_pool = json['0'].geography_pool;
+    var house_pool = json['0'].house_pool;
+    var jobs_pool = json['0'].jobs_pool;
+    var music_pool = json['0'].music_pool;
+    var subjects_pool = json['0'].subjects_pool;
+    var sports_pool = json['0'].sports_pool;
+    var trees_pool = json['0'].trees_pool;
+    var vehicles_pool = json['0'].vehicles_pool;
+    var weather_pool = json['0'].weather_pool;
+    var zodiac_pool = json['0'].zodiac_pool;
+    
 	$('button').css('type','button');
     
     var sel = $('select');
     var selected = $('.selected');
-    var category_1 = $('option').first();
-    var category_2 = $('option').eq(1);
-    var category_3 = $('option').last();
     
-    var old_path = 'url(../images/the_hangman.png)';
+    var old_pbuildingsath = 'url(../images/the_hangman.png)';
     var new_path = 'url(../images/the_hangman_WIN.png)';
 	
 	var myWord = 0;
@@ -59,29 +86,82 @@ $(document).ready(function(){
 	
 	function first_run(){
         run_iteration = 0;
-		//myWord = randomWords[Math.floor(Math.random() * randomWords.length)];
-        //sel.on('change',function(drag){
-            if ($('.categories option:selected').text() == 'Animals'){
-                myWord = cat1_pool[Math.floor(Math.random() * cat1_pool.length)];
-            }
-            else if ($('.categories option:selected').text() == 'Proffesions'){
-                myWord = cat2_pool[Math.floor(Math.random() * cat2_pool.length)];
-            }
-            else if ($('.categories option:selected').text() == 'Sport'){
-                myWord = cat3_pool[Math.floor(Math.random() * cat3_pool.length)];
-            }
-            //return myWord;
-       // })
+        if ($('.categories option:selected').text() == 'Animals'){
+            myWord = animals_pool[Math.floor(Math.random() * animals_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Body'){
+            myWord = body_pool[Math.floor(Math.random() * body_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Buildings'){
+            myWord = buildings_pool[Math.floor(Math.random() * buildings_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'City'){
+            myWord = city_pool[Math.floor(Math.random() * city_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Clothes'){
+            myWord = clothes_pool[Math.floor(Math.random() * clothes_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Computer'){
+            myWord = computer_pool[Math.floor(Math.random() * computer_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Cosmetics'){
+            myWord = cosmetics_pool[Math.floor(Math.random() * cosmetics_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Criminials'){
+            myWord = criminals_pool[Math.floor(Math.random() * criminals_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Family'){
+            myWord = family_pool[Math.floor(Math.random() * family_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Fruits'){
+            myWord = fruits_pool[Math.floor(Math.random() * fruits_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Geography'){
+            myWord = geography_pool[Math.floor(Math.random() * geography_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'House'){
+            myWord = house_pool[Math.floor(Math.random() * house_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Jobs'){
+            myWord = jobs_pool[Math.floor(Math.random() * jobs_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Music'){
+            myWord = music_pool[Math.floor(Math.random() * music_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Subjects'){
+            myWord = subjects_pool[Math.floor(Math.random() * subjects_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Sports'){
+            myWord = sports_pool[Math.floor(Math.random() * sports_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Trees'){
+            myWord = trees_pool[Math.floor(Math.random() * trees_pool.length)];
+            //sel.attr('disabled', 'disabled');
+        }
+        else if ($('.categories option:selected').text() == 'Vehicles'){
+            myWord = vehicles_pool[Math.floor(Math.random() * vehicles_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Weather'){
+            myWord = weather_pool[Math.floor(Math.random() * weather_pool.length)];
+        }
+        else if ($('.categories option:selected').text() == 'Zodiac'){
+            myWord = zodiac_pool[Math.floor(Math.random() * zodiac_pool.length)];
+        }
         
-		myWord = myWord.toUpperCase();
-		//hangman.text(myWord);
-		
-		letters.children().each(function(){
-			$(this).remove();
-		})
 
-        console.log(myWord);
-		//var squares = $('.letters').children('div');
+        if ($('.categories option:selected').text() != 'Select ...'){
+           sel.attr('disabled', 'disabled');
+           $('.first_opt').css('display','none');
+           myWord = myWord.toUpperCase();
+		   letters.children().each(function(){
+                $(this).remove();
+           })
+           
+           surrender.one('click', game_over);
+           surrender.css('background-color', 'green');
+           accept.on('click', testing);
+		   console.log(myWord);
+		}
 
 		for (var a=0; a < myWord.length; a++){
 			var square = $('<div>');
@@ -92,9 +172,6 @@ $(document).ready(function(){
 			square.addClass('center');
 			letters.append(square);
 		}
-		//return myWord, run_iteration;
-		//return run_iteration;
-        //sprite.css('background-image',old_path);
         sprite.removeClass('new_path');
         sprite.addClass('old_path');
         sprite.css('width','150px');
@@ -107,7 +184,6 @@ $(document).ready(function(){
     
 	function testing(){
 		if(selected.text() !== ''){
-		//var value_letter = $('.selected').val();
 		var value_letter = $('.selected').text();
 		console.log('moja litera', value_letter);
 		checking(value_letter);
@@ -118,13 +194,13 @@ $(document).ready(function(){
 			if (value_letter == myWord.charAt(b)){
 				squares.eq(b).text(value_letter);
 				check += 1;
+                $.playSound('../The_Hangman/sounds/correct');
 			}
             if (squares.eq(b).text() !== ''){
                 iteration += 1;
             }
 		}
 		if (check == 0) {
-				//hangman.text('FAIL!');
 				run_iteration -= 150;
 				console.log(run_iteration);
 				sprite.animate({backgroundPositionX: run_iteration + 'px'},1000);
@@ -132,9 +208,10 @@ $(document).ready(function(){
 				heart_count.text(life_number);
 				if (run_iteration == (-1050)){
 					game_over();
-					lose_number += 1;
-					lose_count.text(lose_number);
 				}
+                else {
+                    $.playSound("../The_Hangman/sounds/wrong");
+                }
 			}
 			if (iteration == squares.length){
 
@@ -146,7 +223,6 @@ $(document).ready(function(){
 					$(this).off('click');
 					$(this).css('background-color','green');
 				});   
-				//console.log('juz!');
 				win_number += 1;
 				win_count.text(win_number);
 				$(document).unbind('keyup', key_q);
@@ -176,8 +252,11 @@ $(document).ready(function(){
 				$(document).unbind('keyup', key_n);
 				$(document).unbind('keyup', key_m);
 				$(document).unbind('keyup', key_enter);
-				surrender.off('click');
-				surrender.css('background-color','green');
+                $.playSound("../The_Hangman/sounds/win");
+                surrender.off('click');
+                refresh.one('click', reroll);
+                refresh.css('background-color','green');
+                sel.removeAttr('disabled');
 			}
 		};
 		if (value_letter === 'Q'){
@@ -260,16 +339,16 @@ $(document).ready(function(){
 		}
 	}
     
-	surrender.on('click', game_over);
-    
+	surrender.off('click');
+	
     function game_over(e){
-        surrender.css('background-color','red');
-        surrender.off('click');
+        sel.removeAttr('disabled');
+        refresh.one('click', reroll);
+        refresh.css('background-color','green');
 		var squares = $('.letters').children('div');
 		for (var c=0; c < myWord.length; c++){
 			squares.eq(c).text(myWord.charAt(c));
 		}
-		//hangman.text('FAIL!');
         $('.row').find('button').each(function(){
             $(this).off('click');
             $(this).css('background-color','red');
@@ -277,163 +356,23 @@ $(document).ready(function(){
         accept.off('click');
         accept.css('background-color','red');
         sprite.css('background-position','right');
-        lose_number += 1;
-        lose_count.text(lose_number);
-		//$(document).unbind('keyup');
-		$(document).unbind('keyup', key_q);
-		$(document).unbind('keyup', key_w);
-		$(document).unbind('keyup', key_e);
-		$(document).unbind('keyup', key_r);
-		$(document).unbind('keyup', key_t);
-		$(document).unbind('keyup', key_y);
-		$(document).unbind('keyup', key_u);
-		$(document).unbind('keyup', key_i);
-		$(document).unbind('keyup', key_o);
-		$(document).unbind('keyup', key_p);
-		$(document).unbind('keyup', key_a);
-		$(document).unbind('keyup', key_s);
-		$(document).unbind('keyup', key_d);
-		$(document).unbind('keyup', key_f);
-		$(document).unbind('keyup', key_g);
-		$(document).unbind('keyup', key_h);
-		$(document).unbind('keyup', key_j);
-		$(document).unbind('keyup', key_k);
-		$(document).unbind('keyup', key_l);
-		$(document).unbind('keyup', key_z);
-		$(document).unbind('keyup', key_x);
-		$(document).unbind('keyup', key_c);
-		$(document).unbind('keyup', key_v);
-		$(document).unbind('keyup', key_b);
-		$(document).unbind('keyup', key_n);
-		$(document).unbind('keyup', key_m);
-		$(document).unbind('keyup', key_enter);
-		accept.off('click');
+        locking();
+        lose_count.text(parseInt(lose_count.text())+1);
+        $.playSound("../The_Hangman/sounds/loose");
 	};
 		
-	accept.on('click', testing);
+	accept.off('click');
 	
     function reroll(){
         accept.on('click', testing);
+        refresh.off('click');
 		first_run();
 		pressing();
-        surrender.on('click', game_over);
         surrender.css('background-color','gainsboro');
+        refresh.css('background-color', 'red');
 	};
     
-    refresh.on('click', reroll);
-	
-	/*
-	
-	
-67
-down vote
-accepted
-You have to use a named function so you can reference that specific handler when calling .unbind(), like this:
-
-function keyUpFunc(e) {
-  if (e.keyCode == 27) { functionZzy(); }
-}
-$(document).keyup(keyUpFunc);
-Then later when unbinding:
-
-$(document).unbind("keyup", keyUpFunc);
-	
-	*/
-	
-	//function key_q(q){
-		//if (q.key == 'q'){
-			//selected.text('Q');
-		//}
-	//}
-	
-	//$(document).keyup(key_q);
-	
-    /*
-	document.querySelector('body').onkeyup = function (e){
-		if (e.keyCode === 81){
-			$('.selected').text('Q');
-		}
-		else if (e.keyCode === 87){
-			$('.selected').text('W');
-		}
-		else if (e.keyCode === 69){
-			$('.selected').text('E');
-		}
-		else if (e.keyCode === 82){
-			$('.selected').text('R');
-		}
-		else if (e.keyCode === 84){
-			$('.selected').text('T');
-		}
-		else if (e.keyCode === 89){
-			$('.selected').text('Y');
-		}
-		else if (e.keyCode === 85){
-			$('.selected').text('U');
-		}
-		else if (e.keyCode === 73){
-			$('.selected').text('I');
-		}
-		else if (e.keyCode === 79){
-			$('.selected').text('O');
-		}
-		else if (e.keyCode === 80){
-			$('.selected').text('P');
-		} // ------------------
-		else if (e.keyCode === 65){
-			$('.selected').text('A');
-			//checking();
-		}
-		else if (e.keyCode === 83){
-			$('.selected').text('S');
-		}
-		else if (e.keyCode === 68){
-			$('.selected').text('D');
-		}
-		else if (e.keyCode === 70){
-			$('.selected').text('F');
-		}
-		else if (e.keyCode === 71){
-			$('.selected').text('G');
-		}
-		else if (e.keyCode === 72){
-			$('.selected').text('H');
-		}
-		else if (e.keyCode === 74){
-			$('.selected').text('J');
-		}
-		else if (e.keyCode === 75){
-			$('.selected').text('K');
-		}
-		else if (e.keyCode === 76){
-			$('.selected').text('L');
-		} // ------------
-		else if (e.keyCode === 90){
-			$('.selected').text('Z');
-		}
-		else if (e.keyCode === 88){
-			$('.selected').text('X');
-		}
-		else if (e.keyCode === 67){
-			$('.selected').text('C');
-		}
-		else if (e.keyCode === 86){
-			$('.selected').text('V');
-		}
-		else if (e.keyCode === 66){
-			$('.selected').text('B');
-		}
-		else if (e.keyCode === 78){
-			$('.selected').text('N');
-		}
-		else if (e.keyCode === 77){
-			$('.selected').text('M');
-		} // ===================
-		else if (e.keyCode === 13){
-			testing();
-		}
-	}
-    */
+    refresh.off('click');
 	
 	function key_q(q){
 		if (q.key == 'q'){
@@ -596,12 +535,10 @@ $(document).unbind("keyup", keyUpFunc);
 			testing();
 		}
 	}
-	
-	//$(document).keyup(key_q);
     
 	function pressing(){
 		$('button').css('background-color','gainsboro');
-		
+        surrender.css('background-color', 'green');
 		$(document).keyup(key_q);
 		$(document).keyup(key_w);
 		$(document).keyup(key_e);
@@ -709,6 +646,35 @@ $(document).unbind("keyup", keyUpFunc);
 			$('.selected').text('M');
 		});
 	}
+    function locking(){   
+        $(document).unbind('keyup', key_q);
+		$(document).unbind('keyup', key_w);
+		$(document).unbind('keyup', key_e);
+		$(document).unbind('keyup', key_r);
+		$(document).unbind('keyup', key_t);
+		$(document).unbind('keyup', key_y);
+		$(document).unbind('keyup', key_u);
+		$(document).unbind('keyup', key_i);
+		$(document).unbind('keyup', key_o);
+		$(document).unbind('keyup', key_p);
+		$(document).unbind('keyup', key_a);
+		$(document).unbind('keyup', key_s);
+		$(document).unbind('keyup', key_d);
+		$(document).unbind('keyup', key_f);
+		$(document).unbind('keyup', key_g);
+		$(document).unbind('keyup', key_h);
+		$(document).unbind('keyup', key_j);
+		$(document).unbind('keyup', key_k);
+		$(document).unbind('keyup', key_l);
+		$(document).unbind('keyup', key_z);
+		$(document).unbind('keyup', key_x);
+		$(document).unbind('keyup', key_c);
+		$(document).unbind('keyup', key_v);
+		$(document).unbind('keyup', key_b);
+		$(document).unbind('keyup', key_n);
+		$(document).unbind('keyup', key_m);
+		$(document).unbind('keyup', key_enter);
+    }
     
     select_slider.on('change',reroll);
 	
@@ -716,6 +682,9 @@ $(document).unbind("keyup", keyUpFunc);
 	
 	pressing();
     
-    // ---
+    locking();
+    
+    refresh.css('background-color', 'red');
+    surrender.css('background-color', 'red');
 	
 });

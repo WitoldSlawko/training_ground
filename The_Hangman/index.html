@@ -9,28 +9,45 @@
   src="https://code.jquery.com/jquery-3.1.1.js"
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
   crossorigin="anonymous"></script>
+	<!-- <script type="text/javascript" src="js/hm_words.js"></script> -->
 	<script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/jquery-play-sound.js"></script>
 </head>
 <body>
 	<header>
 		<div class="container">
 			<h1>The Hangman</h1>
-			<!-- <button class="refresh"></button> -->
 		</div>
 	</header>
 	<main>
 		<section class="category_btns">
 			<div class="container">
 				<div class="category_pack">
-					<!--<h2>Category:</h2>-->
-					<!--<div class="category_type"></div>-->
 					<form class="category_type">
 						<fieldset>
 							<label>Category:
 								<select class="categories">
+									<option class="first_opt">Select ...</option>
 									<option>Animals</option>
-									<option>Proffesions</option>
-									<option>Sport</option>
+									<option>Body</option>
+									<option>Buildings</option>
+									<option>City</option>
+									<option>Clothes</option>
+									<option>Computer</option>
+									<option>Cosmetics</option>
+									<option>Criminals</option>
+									<option>Family</option>
+									<option>Fruits</option>
+									<option>Geography</option>
+									<option>House</option>
+									<option>Jobs</option>
+									<option>Music</option>
+									<option>Subjects</option>
+									<option>Sports</option>
+									<option>Trees</option>
+									<option>Vehicles</option>
+									<option>Weather</option>
+									<option>Zodiac</option>
 								</select>
 							</label>
 						</fieldset>
@@ -60,7 +77,6 @@
 		</section>
 		<section class="typing">
 			<div class="container">
-				<!-- <input class="selected center" /> -->
 				<div class="selected center"></div>
 				<button class="accept">Enter</button>
 			</div>
@@ -105,18 +121,3 @@
 	<footer></footer>
 </body>
 </html>
-
-<!--
-* {
-	box-sizing: border-box;
-	border: 1px dotted black;
-	position: relative;
-}
-
-.container {
-	max-width: 1200px;
-	width: 100%;
-	margin: 0 auto;
-	height: 500px;
-}
--->
